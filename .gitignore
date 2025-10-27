@@ -1,0 +1,7 @@
+/.idea/
+/.svelte-kit/
+/dist/
+/node_modules/
+/.env.local
+/.svelte-kit/
+/package-lock.json

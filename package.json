@@ -1,0 +1,147 @@
+{
+  "name": "@ticatec/uniface-micro-frame",
+  "version": "0.0.1",
+  "description": "A powerful micro-frontend framework built on Svelte 5 for developing modular web applications with iframe-based architecture",
+  "scripts": {
+    "dev": "vite dev",
+    "build:css": "sass ./src/lib/uniface-micro-frame.scss:./src/lib/uniface-micro-frame.css --no-source-map",
+    "build": "npm run build:css && svelte-kit sync && svelte-package",
+    "build:watch": "npm run build:css && svelte-kit sync && svelte-package --watch",
+    "package": "npm run build && publint",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "prepublishOnly": "npm run package",
+    "publish:public": "npm run package && npm publish --access public",
+    "release": "npm run package && npm version patch && npm publish --access public",
+    "release:minor": "npm run package && npm version minor && npm publish --access public",
+    "release:major": "npm run package && npm version major && npm publish --access public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README_CN.md",
+    "LICENSE",
+    "!dist/**/*.scss",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*",
+    "!dist/**/*.stories.*"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "svelte": "./dist/index.js"
+    },
+    "./styles": "./dist/uniface-micro-frame.css",
+    "./uniface-micro-frame.css": "./dist/uniface-micro-frame.css",
+    "./AppModule": {
+      "types": "./dist/module/AppModule.d.ts",
+      "import": "./dist/module/AppModule.js"
+    },
+    "./common": {
+      "types": "./dist/common/index.d.ts",
+      "import": "./dist/common/index.js"
+    },
+    "./HomePage": {
+      "types": "./dist/HomePage.svelte.d.ts",
+      "import": "./dist/HomePage.svelte",
+      "svelte": "./dist/HomePage.svelte"
+    },
+    "./CommonPage": {
+      "types": "./dist/pages/CommonPage.svelte.d.ts",
+      "import": "./dist/pages/CommonPage.svelte",
+      "svelte": "./dist/pages/CommonPage.svelte"
+    },
+    "./CommonFormPage": {
+      "types": "./dist/pages/CommonFormPage.svelte.d.ts",
+      "import": "./dist/pages/CommonFormPage.svelte",
+      "svelte": "./dist/pages/CommonFormPage.svelte"
+    },
+    "./module": {
+      "types": "./dist/module/index.d.ts",
+      "import": "./dist/module/index.js"
+    },
+    "./module/ModuleHome": {
+      "types": "./dist/module/ModuleHome.svelte.d.ts",
+      "import": "./dist/module/ModuleHome.svelte",
+      "svelte": "./dist/module/ModuleHome.svelte"
+    },
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0",
+    "@ticatec/uniface-element": "^0.3.0",
+    "@ticatec/i18n": "^0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@ticatec/uniface-element": {
+      "optional": false
+    },
+    "@ticatec/i18n": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^4.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/package": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@ticatec/enhanced-utils": "^0.9.0",
+    "@ticatec/i18n": "^0.2.1",
+    "@ticatec/uniface-dev-shell": "^0.0.6",
+    "@ticatec/uniface-element": "^0.3.2",
+    "@ticatec/uniface-google-material-icons": "^0.1.2",
+    "@types/node": "^24.2.1",
+
+    "axios": "^1.8.2",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.4.7",
+    "publint": "^0.3.2",
+    "sass": "^1.77.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "svelte-portal": "^2.2.1",
+    "svelte-preprocess": "^6.0.3",
+    "tslib": "^2.6.0",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.11"
+  },
+  "keywords": [
+    "svelte",
+    "micro-frontend",
+    "microfrontend",
+    "iframe",
+    "framework",
+    "typescript",
+    "web-components",
+    "spa",
+    "modular",
+    "uniface"
+  ],
+  "homepage": "https://github.com/ticatec/uniface-micro-frame#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ticatec/uniface-micro-frame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ticatec/uniface-micro-frame/issues"
+  },
+  "author": {
+    "name": "Henry Feng",
+    "email": "henry@ticatec.com"
+  },
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {}
+}
