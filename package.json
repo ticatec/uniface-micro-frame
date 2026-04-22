@@ -1,6 +1,6 @@
 {
   "name": "@ticatec/uniface-micro-frame",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A powerful micro-frontend framework built on Svelte 5 for developing modular web applications with iframe-based architecture",
   "scripts": {
     "dev": "vite dev",
@@ -93,10 +93,10 @@
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
-    "@ticatec/enhanced-utils": "^0.9.0",
-    "@ticatec/i18n": "^0.2.1",
+    "@ticatec/enhanced-utils": "^1.0.1",
+    "@ticatec/i18n": "^0.2.2",
     "@ticatec/uniface-dev-shell": "^0.0.6",
-    "@ticatec/uniface-element": "^0.3.2",
+    "@ticatec/uniface-element": "^0.3.4",
     "@ticatec/uniface-google-material-icons": "^0.1.2",
     "@types/node": "^24.2.1",
 

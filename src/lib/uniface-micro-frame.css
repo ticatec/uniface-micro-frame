@@ -29,71 +29,21 @@
   height: 100%;
   background-color: var(--uniface-application-bg, #ffffff);
 }
-
-.uniface-module-board {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: relative;
-  background-color: var(--uniface-application-bg, #ffffff);
-}
-.uniface-module-board .uniface-page .page-action-button {
-  cursor: pointer;
-  color: var(--uniface-dialog-action-button-color, #B3BCCA);
-}
-.uniface-module-board .uniface-page .page-action-button:hover {
-  background-color: var(--uniface-dialog-action-button-hover-background-color, #E2E8F0);
-  border-radius: 4px;
-}
-.uniface-module-board .uniface-page .page-action-button:active {
-  position: relative;
-  top: 1px;
-}
-.uniface-module-board .common-page-container {
+.uniface-micro-frame-board .common-page-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.uniface-module-board .common-page-container .uniface-app-cards-board {
-  flex: 1 1 auto;
+.uniface-micro-frame-board .uniface-page .page-action-button {
+  cursor: pointer;
+  color: var(--uniface-dialog-action-button-color, #B3BCCA);
 }
-.uniface-module-board .common-page-container .card_board_footer, .uniface-module-board .common-page-container .card_board_footer {
-  flex: 0 0 auto;
+.uniface-micro-frame-board .uniface-page .page-action-button:hover {
+  background-color: var(--uniface-dialog-action-button-hover-background-color, #E2E8F0);
+  border-radius: 4px;
 }
-
-.gradient_transparent_overlay {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  height: 40px;
-  background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
-  pointer-events: none;
-}
-.gradient_transparent_overlay.at_top {
-  bottom: unset;
-  top: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-}
-.gradient_transparent_overlay.hidden {
-  display: none;
-}
-
-.uniface-app-cards-board {
-  width: 100%;
-  height: 100%;
+.uniface-micro-frame-board .uniface-page .page-action-button:active {
   position: relative;
-  overflow: hidden;
-}
-.uniface-app-cards-board .content-panel {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 12px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow: auto;
-  align-content: flex-start;
+  top: 1px;
 }

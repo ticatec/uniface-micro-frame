@@ -18,6 +18,8 @@
 
     export let actions: ButtonActions = [];
 
+    export let style: string = "width: 100%; height: 100%; padding: 8px; overflow: auto; box-sizing: border-box;"
+
     let buttons: ButtonActions = actions;
 
     let page: any;
@@ -36,7 +38,7 @@
     <div slot="header-ext" style="flex: 0 0 auto; display: flex;position: relative; align-items: center; column-gap: 8px">
         <ActionBar {buttons}/>
     </div>
-    <div style="width: 100%; height: 100%; padding: 8px; overflow: auto; box-sizing: border-box;">
+    <div {style}>
         <slot/>
     </div>
 </CommonPage>
